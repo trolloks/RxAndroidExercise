@@ -25,4 +25,25 @@
         android:padding="16dp"
         android:text="Single"/>
 
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/example4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Subject"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/example5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Map"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/example6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="All"/>
+
 </LinearLayout>

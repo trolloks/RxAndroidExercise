@@ -33,6 +33,18 @@
             android:name=".examples.Example3Activity"
             android:configChanges="orientation|screenSize" />
 
+        <activity
+            android:name=".examples.Example4Activity"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".examples.Example5Activity"
+            android:configChanges="orientation|screenSize" />
+
+        <activity
+            android:name=".examples.Example6Activity"
+            android:configChanges="orientation|screenSize" />
+
     </application>
 
 
