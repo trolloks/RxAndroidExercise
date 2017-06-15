@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">RxAndroidExercise</string>
+    <string name="error_message">Oops. An Error Occurred.</string>
 </resources>

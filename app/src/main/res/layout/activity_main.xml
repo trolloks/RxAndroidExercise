@@ -9,13 +9,20 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Example 1"/>
+        android:text="just"/>
 
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/example2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp"
-        android:text="Example 2"/>
+        android:text="fromCallable"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/example3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:text="Single"/>
 
 </LinearLayout>

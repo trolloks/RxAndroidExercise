@@ -8,6 +8,7 @@ import android.view.View;
 
 import me.trolloks.rxandroidexercise.examples.Example1Activity;
 import me.trolloks.rxandroidexercise.examples.Example2Activity;
+import me.trolloks.rxandroidexercise.examples.Example3Activity;
 
 /**
  * Created by rikus on 2017/06/15.
@@ -36,6 +37,14 @@ public class Main extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Main.this, Example2Activity.class);
+                startActivity(intent);
+            }
+        });
+
+        findViewById(R.id.example3).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Main.this, Example3Activity.class);
                 startActivity(intent);
             }
         });

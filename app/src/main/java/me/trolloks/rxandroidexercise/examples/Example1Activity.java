@@ -60,7 +60,7 @@ public class Example1Activity extends AppCompatActivity {
         }
 
         setContentView(R.layout.activity_example1);
-        setTitle("Example 1");
+        setTitle("just");
         mColorListView = (RecyclerView) findViewById(R.id.color_list);
         mColorListView.setLayoutManager(new LinearLayoutManager(this));
         mSimpleStringAdapter = new SimpleStringAdapter(this);
