@@ -25,6 +25,10 @@
             android:name=".examples.Example1Activity"
             android:configChanges="orientation|screenSize" />
 
+        <activity
+            android:name=".examples.Example2Activity"
+            android:configChanges="orientation|screenSize" />
+
     </application>
 
 

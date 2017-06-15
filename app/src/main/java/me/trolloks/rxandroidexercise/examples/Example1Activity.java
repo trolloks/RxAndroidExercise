@@ -3,19 +3,26 @@ package me.trolloks.rxandroidexercise.examples;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.MenuItem;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import me.trolloks.rxandroidexercise.R;
+import me.trolloks.rxandroidexercise.utils.SimpleStringAdapter;
 import rx.Observable;
+import rx.Observer;
 
 /**
  * Created by rikus on 2017/06/15.
  */
 
 public class Example1Activity extends AppCompatActivity {
+
+    private RecyclerView mColorListView;
+    private SimpleStringAdapter mSimpleStringAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,7 +32,25 @@ public class Example1Activity extends AppCompatActivity {
     }
 
     private void createObservable() {
+        // listObservable gets set up so that the moment it subscribes "getColorList()" gets called.
+        // JUST runs on the UI thread
         Observable<List<String>> listObservable = Observable.just(getColorList());
+        listObservable.subscribe(new Observer<List<String>>() {
+            @Override
+            public void onCompleted() {
+
+            }
+
+            @Override
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onNext(List<String> colors) {
+                mSimpleStringAdapter.setStrings(colors);
+            }
+        });
     }
 
     private void configureLayout() {
@@ -36,6 +61,10 @@ public class Example1Activity extends AppCompatActivity {
 
         setContentView(R.layout.activity_example1);
         setTitle("Example 1");
+        mColorListView = (RecyclerView) findViewById(R.id.color_list);
+        mColorListView.setLayoutManager(new LinearLayoutManager(this));
+        mSimpleStringAdapter = new SimpleStringAdapter(this);
+        mColorListView.setAdapter(mSimpleStringAdapter);
     }
 
     private static List<String> getColorList() {
